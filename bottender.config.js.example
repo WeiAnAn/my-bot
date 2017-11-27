@@ -1,0 +1,8 @@
+module.exports = {
+  messenger: {
+    accessToken: '',
+    verifyToken: '',
+    appId: '',
+    appSecret: ''
+  }
+};
