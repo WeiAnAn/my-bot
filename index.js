@@ -1,5 +1,6 @@
 const { MessengerBot } = require('bottender');
 const { createServer } = require('bottender/express');
+const handler = require('./handler/messengerHandler');
 
 const config = require('./bottender.config.js').messenger;
 
@@ -8,9 +9,7 @@ const bot = new MessengerBot({
   appSecret: config.appSecret,
 });
 
-bot.onEvent(async context => {
-  await context.sendText(context.event.message.text);
-});
+bot.onEvent(handler);
 
 const server = createServer(bot);
 
