@@ -1,6 +1,7 @@
 const { MessengerBot, MemorySessionStore } = require('bottender');
 const { createServer } = require('bottender/express');
 const handler = require('./handler/messengerHandler');
+const path = require('path');
 
 const config = require('./bottender.config.js').messenger;
 
@@ -16,6 +17,10 @@ bot.setInitialState({
 });
 
 const server = createServer(bot);
+
+server.get('/resume', (req, res) => {
+  return res.sendFile(path.resolve('./履歷.pdf'));
+});
 
 server.listen(5000, () => {
   console.log('server is running on 5000 port...');
