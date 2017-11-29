@@ -5,8 +5,8 @@ const handler = require('./handler/messengerHandler');
 const config = require('./bottender.config.js').messenger;
 
 const bot = new MessengerBot({
-  accessToken: config.accessToken,
-  appSecret: config.appSecret,
+  accessToken: process.env.accessToken,
+  appSecret: process.env.appSecret,
   sessionStore: new MemorySessionStore(300)
 });
 
