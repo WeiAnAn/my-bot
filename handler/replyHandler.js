@@ -100,6 +100,13 @@ GitHub : https://github.com/WeiAnAn
 我現在正在找實習，如果對我有興趣，歡迎聯絡我！
   `;
   await context.sendText(personalInformation);
+  await context.sendText('以下是完整履歷 歡迎參考');
+  await context.sendAttachment({
+    type: 'file',
+    payload: {
+      url: `${process.env.HOST}/resume`
+    }
+  });
 }
 
 async function solveGetStarted(context) {
