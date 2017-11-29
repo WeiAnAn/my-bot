@@ -2,8 +2,6 @@ const { MessengerBot, MemorySessionStore } = require('bottender');
 const { createServer } = require('bottender/express');
 const handler = require('./handler/messengerHandler');
 
-const config = require('./bottender.config.js').messenger;
-
 const bot = new MessengerBot({
   accessToken: process.env.accessToken,
   appSecret: process.env.appSecret,
