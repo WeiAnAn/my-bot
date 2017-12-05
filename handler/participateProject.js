@@ -28,7 +28,7 @@ source code: https://github.com/WeiAnAn/ciae_inquire
     payload: 'PARTICIPATE_PROJECT_CCU_MIS_BOOKING',
     detail: `
 將原有借用流程電子化，提升借用速度，以及減少紙張使用。
-目前第一階段以開發完成，現在欲開發電子化開鎖。
+目前第一階段以開發完成，現在欲開發學生證嗶卡登入功能。
 
 website: https://booking.mis.ccu.edu.tw
          https://140.123.174.61
